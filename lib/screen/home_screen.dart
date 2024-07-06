@@ -7,22 +7,32 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      drawer: const Drawer(
-        child: Text('Test Drawer'),
-      ),
-      appBar: AppBar(
-        title: Text('Home'),
-      ),
-      body: Center(
-        child: ElevatedButton(
-          onPressed: () {
-            Navigator.of(context).push(
-              MaterialPageRoute(builder: (context) => const SecondScreen()),
-            );
-          },
-          child: Text('Go to Home Screen'),
+        drawer: const Drawer(
+          child: Text('Test Drawer'),
         ),
-      ),
-    );
+        appBar: AppBar(
+          title: Text('หน้าหลัก'),
+        ),
+        body: Container(
+          child: Row(
+            children: [
+              Container(
+                color: Colors.red,
+                width: 90,
+                height: 90,
+              ),
+              Container(
+                color: Colors.green,
+                width: 100,
+                height: 120,
+              ),
+              Container(
+                color: Colors.blue,
+                width: 100,
+                height: 140,
+              ),
+            ],
+          ),
+        ));
   }
 }
